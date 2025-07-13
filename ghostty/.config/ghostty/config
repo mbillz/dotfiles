@@ -1,0 +1,5 @@
+theme = catppuccin-frappe
+font-size = 16
+font-family = "FiraCode Nerd Font"
+window-padding-x = 8
+window-padding-y = 8
