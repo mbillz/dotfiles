@@ -7,9 +7,17 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.scrolloff = 5
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = "yes"
 
 -- Keymaps
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>w", ":w<CR>", { desc = "Save file" })
 vim.keymap.set("n", "<leader>q", ":q<CR>", { desc = "Quit" })
+
+-- Diagnostics
+vim.diagnostic.config({
+	virtual_text = false,
+	virtual_lines = {
+		only_current_line = true,
+	},
+})
