@@ -13,6 +13,7 @@ vim.opt.signcolumn = "yes"
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>w", ":w<CR>", { desc = "Save file" })
 vim.keymap.set("n", "<leader>q", ":q<CR>", { desc = "Quit" })
+vim.keymap.set({ "n", "v" }, "<leader>y", '"+y', { desc = "Yank to system clipboard" })
 
 -- Diagnostics
 vim.diagnostic.config({
@@ -20,4 +21,12 @@ vim.diagnostic.config({
 	virtual_lines = {
 		only_current_line = true,
 	},
+	float = {
+		border = "rounded",
+		focusable = false,
+		max_width = 80,
+		source = "always",
+	},
 })
+
+vim.keymap.set("n", "<leader>de", vim.diagnostic.open_float, { desc = "Show diagnostic popup" })
