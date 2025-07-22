@@ -2,11 +2,14 @@ return {
 	"stevearc/conform.nvim",
 	opts = {
 		formatters_by_ft = {
-			javascript = { "prettier" },
-			typescript = { "prettier" },
-			javascriptreact = { "prettier" },
-			typescriptreact = { "prettier" },
-			lua = { "stylua" },
+			javascript = { "eslint", "prettier" },
+			javascriptreact = { "eslint", "prettier" },
+			typescript = { "eslint", "prettier" },
+			typescriptreact = { "eslint", "prettier" },
+			json = { "prettier" },
+			yaml = { "prettier" },
+			markdown = { "prettier" },
+      lua = { "stylua" },
 		},
 	},
 	config = function(_, opts)
