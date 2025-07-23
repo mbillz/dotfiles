@@ -21,6 +21,20 @@ return {
 		vim.keymap.set("n", "<leader>fx", function()
 			builtin.diagnostics({ bufnr = 0 })
 		end, { desc = "Diagnostics (current file)" })
+		vim.keymap.set("n", "<leader>fr", require("telescope.builtin").lsp_references, { desc = "LSP References" })
+		vim.keymap.set("n", "<leader>fd", require("telescope.builtin").lsp_definitions, { desc = "LSP Definitions" })
+		vim.keymap.set(
+			"n",
+			"<leader>fi",
+			require("telescope.builtin").lsp_implementations,
+			{ desc = "LSP Implementations" }
+		)
+		vim.keymap.set(
+			"n",
+			"<leader>ft",
+			require("telescope.builtin").lsp_type_definitions,
+			{ desc = "LSP Type Definitions" }
+		)
 
 		-- git
 		vim.keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<cr>", { desc = "Git Commits" })
