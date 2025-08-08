@@ -13,7 +13,7 @@ return {
 				eslint_d.with({
 					diagnostics_format = "[eslint] #{m}\n(#{c})",
 					condition = function(utils)
-						return utils.root_has_file({ ".eslintrc.js", ".eslintrc.json", ".eslintrc" })
+						return utils.root_has_file({ ".eslintrc.js", ".eslintrc.json", ".eslintrc", "eslint.config.mjs" })
 					end,
 				}),
 			},
