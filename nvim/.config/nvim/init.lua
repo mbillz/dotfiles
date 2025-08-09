@@ -18,14 +18,12 @@ vim.keymap.set({ "n", "v" }, "<leader>y", '"+y', { desc = "Yank to system clipbo
 -- Diagnostics
 vim.diagnostic.config({
 	virtual_text = false,
-	virtual_lines = {
-		only_current_line = true,
-	},
 	float = {
 		border = "rounded",
 		focusable = false,
 		max_width = 80,
 		source = "always",
+    wrap = true,
 	},
 })
 

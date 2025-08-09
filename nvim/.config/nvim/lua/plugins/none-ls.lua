@@ -11,7 +11,7 @@ return {
 		null_ls.setup({
 			sources = {
 				eslint_d.with({
-					diagnostics_format = "[eslint] #{m}\n(#{c})",
+					diagnostics_format = "[eslint] #{m} (#{c})",
 					condition = function(utils)
 						return utils.root_has_file({ ".eslintrc.js", ".eslintrc.json", ".eslintrc", "eslint.config.mjs" })
 					end,
