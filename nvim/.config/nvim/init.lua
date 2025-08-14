@@ -8,6 +8,7 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.scrolloff = 5
 vim.opt.signcolumn = "yes"
+vim.opt.swapfile = false
 
 -- Keymaps
 vim.g.mapleader = " "
