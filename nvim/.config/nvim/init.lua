@@ -9,6 +9,7 @@ vim.opt.expandtab = true
 vim.opt.scrolloff = 5
 vim.opt.signcolumn = "yes"
 vim.opt.swapfile = false
+vim.opt.winborder = "rounded"
 
 -- Keymaps
 vim.g.mapleader = " "
