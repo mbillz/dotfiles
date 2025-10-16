@@ -2,14 +2,20 @@ return {
 	"stevearc/conform.nvim",
 	opts = {
 		formatters_by_ft = {
-			javascript = { "eslint", "prettier" },
-			javascriptreact = { "eslint", "prettier" },
-			typescript = { "eslint", "prettier" },
-			typescriptreact = { "eslint", "prettier" },
-			json = { "prettier" },
+			javascript = { "biome", "eslint_d", "prettier", stop_after_first = true },
+			javascriptreact = { "biome", "eslint_d", "prettier", stop_after_first = true },
+			typescript = { "biome", "eslint_d", "prettier", stop_after_first = true },
+			typescriptreact = { "biome", "eslint_d", "prettier", stop_after_first = true },
+			json = { "biome", "prettier", stop_after_first = true },
 			yaml = { "prettier" },
 			markdown = { "prettier" },
-      lua = { "stylua" },
+			lua = { "stylua" },
+		},
+		formatters = {
+			biome = {
+				command = "biome",
+				args = { "check", "--write", "--stdin-file-path", "$FILENAME" },
+			},
 		},
 	},
 	config = function(_, opts)
