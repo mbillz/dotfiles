@@ -1,5 +1,5 @@
 return {
-	"stevearc/conform.nvim",
+  "stevearc/conform.nvim",
 	opts = {
 		formatters_by_ft = {
 			javascript = { "biome", "eslint_d", "prettier", stop_after_first = true },
