@@ -1,0 +1,49 @@
+{
+  "lastChangelogVersion": "0.72.0",
+  "defaultProvider": "anthropic",
+  "defaultModel": "claude-sonnet-4-6",
+  "defaultThinkingLevel": "high",
+  "packages": [
+    {
+      "source": "git:https://github.com/hasit/pi-community-themes",
+      "themes": [
+        "+themes/catppuccin-frappe.json",
+        "+themes/atom-one-dark.json",
+        "+themes/atom-one-light.json"
+      ]
+    },
+    "npm:pi-subagents",
+    "npm:pi-side-agents",
+    "git:github.com/offline-ant/pi-semaphore",
+    "git:github.com/offline-ant/pi-tmux",
+    "npm:pi-powerline-footer"
+  ],
+  "theme": "catppuccin-frappe",
+  "warnings": {
+    "anthropicExtraUsage": false
+  },
+  "subagents": {
+    "agentOverrides": {
+      "scout": {
+        "model": "anthropic/claude-haiku-4",
+        "thinking": "none",
+        "defaultContext": "fresh"
+      },
+      "planner": {
+        "model": "anthropic/claude-sonnet-4-6",
+        "thinking": "medium",
+        "defaultContext": "fresh"
+      },
+      "worker": {
+        "model": "anthropic/claude-sonnet-4-6",
+        "thinking": "medium",
+        "defaultContext": "fresh"
+      },
+      "oracle": {
+        "model": "anthropic/claude-sonnet-4-6",
+        "thinking": "high",
+        "defaultContext": "fork"
+      }
+    }
+  }
+}
