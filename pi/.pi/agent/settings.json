@@ -1,7 +1,7 @@
 {
-  "lastChangelogVersion": "0.72.1",
+  "lastChangelogVersion": "0.80.10",
   "defaultProvider": "anthropic",
-  "defaultModel": "claude-sonnet-4-6",
+  "defaultModel": "claude-sonnet-5",
   "defaultThinkingLevel": "high",
   "packages": [
     {
@@ -15,8 +15,8 @@
     "npm:pi-subagents",
     "npm:pi-side-agents",
     "git:github.com/offline-ant/pi-semaphore",
-    "git:github.com/offline-ant/pi-tmux",
-    "npm:pi-powerline-footer"
+    "npm:pi-powerline-footer",
+    "npm:@weshipwork/pi-herdr"
   ],
   "theme": "catppuccin-frappe",
   "warnings": {
