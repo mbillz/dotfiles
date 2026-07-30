@@ -3,3 +3,6 @@ name = "catppuccin"
 
 [experimental]
 pane_history = false
+
+[ui]
+agent_panel_sort = "spaces"
