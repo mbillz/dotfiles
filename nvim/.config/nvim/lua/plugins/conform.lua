@@ -11,14 +11,14 @@ return {
 			markdown = { "prettier" },
 			lua = { "stylua" },
 		},
-		formatters = {
-			biome = {
-				command = "biome",
-				args = { "check", "--write", "--stdin-file-path", "$FILENAME" },
-			},
-		},
 	},
 	config = function(_, opts)
+		opts.formatters = {
+			biome = {
+				command = require("conform.util").from_node_modules("biome"),
+				args = { "check", "--write", "--stdin-file-path", "$FILENAME" },
+			},
+		}
 		require("conform").setup(opts)
 
 		vim.keymap.set({ "n", "v" }, "<leader>f", function()
