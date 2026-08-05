@@ -10,6 +10,7 @@ vim.opt.scrolloff = 5
 vim.opt.signcolumn = "yes"
 vim.opt.swapfile = false
 vim.opt.winborder = "rounded"
+vim.opt.foldlevelstart = 99
 
 -- Keymaps
 vim.g.mapleader = " "
